@@ -1,6 +1,6 @@
 function Image(img)
 	if img.classes:find('comment',1) then
-		local f = io.open("comment/" .. img.src, 'r')
+		local f = io.open("P2017002/" .. img.src, 'r')
 		local doc = pandoc.read(f:read('*a'))
 		f:close()
 		local caption = pandoc.utils.stringify(doc.meta.caption) or "Epigraph has not been set"
